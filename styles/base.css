@@ -1,0 +1,304 @@
+/* ===============================
+   WDD 231 - Base Styles
+   Author: Wanyama Edgar
+================================== */
+
+:root {
+    --primary-color: #003366;
+    --secondary-color: #00509d;
+    --accent-color: #f4b400;
+    --light-color: #f4f4f4;
+    --white: #ffffff;
+    --dark: #222222;
+    --success: #2e7d32;
+
+    --max-width: 1100px;
+
+    --heading-font: "Roboto", sans-serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+/* -------------------------------
+   Reset
+-------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--light-color);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* -------------------------------
+   Header
+-------------------------------- */
+
+header {
+    background: var(--primary-color);
+    color: var(--white);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.logo-name h2 {
+    font-size: 1.3rem;
+}
+
+.logo-name p {
+    font-size: .95rem;
+}
+
+/* -------------------------------
+   Navigation
+-------------------------------- */
+
+#menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    transition: .3s;
+}
+
+.navigation a:hover {
+    background: var(--secondary-color);
+}
+
+.navigation .active {
+    background: var(--accent-color);
+    color: black;
+    font-weight: bold;
+}
+
+/* -------------------------------
+   Main
+-------------------------------- */
+
+main {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+.top-section {
+    display: grid;
+    gap: 1rem;
+}
+
+/* -------------------------------
+   Cards
+-------------------------------- */
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.12);
+}
+
+.card h2 {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: .8rem;
+}
+
+.card p {
+    padding: 1rem;
+}
+
+.photo-card {
+    text-align: center;
+}
+
+.photo-card img {
+    width: 220px;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+/* -------------------------------
+   Certificate Section
+-------------------------------- */
+
+.certificate {
+    margin-top: 2rem;
+}
+
+.certificate h2 {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: .8rem;
+    border-radius: 10px 10px 0 0;
+}
+
+/* -------------------------------
+   Buttons
+-------------------------------- */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: .75rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.filter-buttons button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: .7rem 1.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 1rem;
+}
+
+.filter-buttons button:hover {
+    background: var(--secondary-color);
+}
+
+/* -------------------------------
+   Course Cards
+-------------------------------- */
+
+.course-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.course {
+    background: white;
+    border-left: 8px solid var(--primary-color);
+
+    padding: 1rem;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.completed {
+    background: #d7f5d7;
+    border-left-color: var(--success);
+}
+
+/* -------------------------------
+   Credits
+-------------------------------- */
+
+.credits {
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem 0;
+    font-size: 1.15rem;
+}
+
+/* -------------------------------
+   Footer
+-------------------------------- */
+
+footer {
+    margin-top: 3rem;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.socials svg,
+.socials img {
+    width: 32px;
+    height: 32px;
+    transition: .3s;
+}
+
+.socials a:hover {
+    transform: scale(1.15);
+}
+
+footer p {
+    margin: .5rem 0;
+}
