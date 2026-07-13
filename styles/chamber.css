@@ -2,7 +2,7 @@
    Chamber Directory Styles
 ========================================== */
 
-:root {
+body.chamber {
     --primary-color: #0b3c5d;
     --secondary-color: #328cc1;
     --accent-color: #d9b310;
@@ -11,19 +11,12 @@
     --text-color: #222;
     --border-radius: 12px;
     --shadow: 0 5px 18px rgba(0,0,0,.08);
-}
+    --max-width: 1200px;
 
-body {
     background: var(--background-color);
 }
 
 /* Main */
-
-main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
-}
 
 /* Hero */
 
@@ -56,6 +49,7 @@ main h1 {
 
 .view-buttons button {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 50px;
