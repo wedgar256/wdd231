@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Wanyama Edgar" />
+    <meta
+      name="description"
+      content="Explore the Kampala Chamber of Commerce business directory featuring local businesses and organizations."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Chamber Directory | Kampala Chamber of Commerce</title>
+
+    <link rel="icon" href="../images/favicon.ico" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/larger.css" />
+    <link rel="stylesheet" href="../styles/chamber.css" />
+
+    <!-- JavaScript -->
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/date.js" defer></script>
+    <script src="directory.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-name">
+        <img
+          src="../images/profile.webp"
+          alt="Kampala Chamber of Commerce Logo"
+          class="logo"
+        />
+
+        <div>
+          <span class="site-name"> Kampala Chamber </span>
+
+          <p>Directory</p>
+        </div>
+      </div>
+
+      <button id="menu" aria-label="Open Navigation"></button>
+
+      <nav>
+        <ul class="navigation">
+          <li><a href="../index.html">Home</a></li>
+
+          <li><a href="index.html" class="active">Directory</a></li>
+
+          <li><a href="#">Join</a></li>
+
+          <li><a href="#">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Business Directory</h1>
+
+        <p>
+          Discover trusted businesses and organizations that are members of the
+          Kampala Chamber of Commerce.
+        </p>
+      </section>
+
+      <section class="view-buttons">
+        <button id="grid">🔳 Grid</button>
+
+        <button id="list">📋 List</button>
+      </section>
+
+      <section id="members" class="grid">
+        <!-- JavaScript inserts member cards -->
+      </section>
+    </main>
+
+    <footer>
+      <div class="socials">
+        <a href="https://github.com/wedgar256" target="_blank" rel="noopener">
+          <img src="../images/github-logo.svg" alt="GitHub Icon" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/edgar-wans-aa0b4a3b6"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="../images/linkedin-logo.svg" alt="LinkedIn Icon" />
+        </a>
+
+        <a href="https://x.com/WanyamaEdgar_" target="_blank" rel="noopener">
+          <img src="../images/x-logo.svg" alt="X (formerly Twitter) logo" />
+        </a>
+      </div>
+
+      <p>
+        &copy;
+
+        <span id="currentyear"></span>
+
+        Wanyama Edgar
+      </p>
+
+      <p>
+        Last Modified
+
+        <span id="lastModified"></span>
+      </p>
+    </footer>
+  </body>
+</html>

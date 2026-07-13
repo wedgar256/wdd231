@@ -123,4 +123,4 @@ cseBtn.addEventListener("click", () => {
 });
 
 // Initial Display
-displayCourses(courses);
+displayCourses(courses);[]

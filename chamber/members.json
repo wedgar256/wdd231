@@ -1,0 +1,82 @@
+[
+    {
+        "name": "MTN Uganda",
+        "address": "MTN Towers, Kampala",
+        "phone": "+256 772 123456",
+        "website": "https://www.mtn.co.ug",
+        "image": "../images/mtn.webp",
+        "membership": "Gold"
+    },
+    {
+        "name": "Airtel Uganda",
+        "address": "Airtel House, Kampala",
+        "phone": "+256 752 987654",
+        "website": "https://www.airtel.co.ug",
+        "image": "../images/airtel.webp",
+        "membership": "Gold"
+    },
+    {
+        "name": "Centenary Bank",
+        "address": "Mapeera House, Kampala",
+        "phone": "+256 414 123456",
+        "website": "https://www.centenarybank.co.ug",
+        "image": "../images/centenary.webp",
+        "membership": "Silver"
+    },
+    {
+        "name": "Stanbic Bank Uganda",
+        "address": "Stanbic Business Centre, Kampala",
+        "phone": "+256 312 224600",
+        "website": "https://www.stanbicbank.co.ug",
+        "image": "../images/stanbic.webp",
+        "membership": "Gold"
+    },
+    {
+        "name": "Quality Supermarket",
+        "address": "Naalya, Kampala",
+        "phone": "+256 414 666888",
+        "website": "https://qualitysupermarket.co.ug",
+        "image": "../images/quality.webp",
+        "membership": "Bronze"
+    },
+    {
+        "name": "Sheraton Kampala Hotel",
+        "address": "Ternan Avenue, Kampala",
+        "phone": "+256 414 420000",
+        "website": "https://www.marriott.com",
+        "image": "../images/sheraton.webp",
+        "membership": "Gold"
+    },
+    {
+        "name": "Uganda Breweries",
+        "address": "Port Bell Road, Kampala",
+        "phone": "+256 312 226000",
+        "website": "https://www.ugandabreweries.com",
+        "image": "../images/breweries.webp",
+        "membership": "Silver"
+    },
+    {
+        "name": "Roofings Group",
+        "address": "Namanve Industrial Park",
+        "phone": "+256 312 213100",
+        "website": "https://roofingsgroup.com",
+        "image": "../images/roofings.webp",
+        "membership": "Gold"
+    },
+    {
+        "name": "Cafe Javas",
+        "address": "Kampala Road",
+        "phone": "+256 312 531400",
+        "website": "https://cafejavas.co.ug",
+        "image": "../images/cafejavas.webp",
+        "membership": "Silver"
+    },
+    {
+        "name": "Movit Products",
+        "address": "Industrial Area, Kampala",
+        "phone": "+256 312 307200",
+        "website": "https://movitproducts.com",
+        "image": "../images/movit.webp",
+        "membership": "Bronze"
+    }
+]

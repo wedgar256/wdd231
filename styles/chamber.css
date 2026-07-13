@@ -1,0 +1,155 @@
+/* ------------------------------
+   Chamber Directory Styles
+------------------------------ */
+
+:root {
+    --primary-color: #0b3c5d;
+    --secondary-color: #328cc1;
+    --accent-color: #d9b310;
+    --background-color: #f7f7f7;
+    --card-background: #ffffff;
+    --text-color: #222;
+    --border-radius: 10px;
+    --shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+body {
+    background: var(--background-color);
+}
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero h1 {
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+}
+
+/* View Buttons */
+
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.view-buttons button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: .75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.view-buttons button:hover {
+    background: var(--secondary-color);
+}
+
+/* Grid Layout */
+
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Member Card */
+
+.member-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform .3s;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.member-card h2 {
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+}
+
+.member-card p {
+    margin: .4rem 0;
+    font-size: .95rem;
+}
+
+.member-card a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+/* List View */
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+#members.list .member-card {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    text-align: left;
+    padding: 1rem;
+}
+
+#members.list .member-card img {
+    display: none;
+}
+
+#members.list .member-card h2 {
+    margin: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    #members.list .member-card {
+        grid-template-columns: 1fr;
+        gap: .5rem;
+    }
+
+    .view-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .view-buttons button {
+        width: 200px;
+    }
+
+}

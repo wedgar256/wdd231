@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Wanyama Edgar" />
+    <meta
+      name="description"
+      content="Directory of businesses in the Chamber of Commerce"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Business Directory | WDD 231 Chamber</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/larger.css" />
+
+    <!-- JS -->
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="directory.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-name">
+        <img src="../images/profile.webp" alt="Wanyama Edgar" class="logo" />
+        <div>
+          <span class="site-name">Kampala Chamber</span>
+          <p>of Commerce</p>
+        </div>
+      </div>
+      <button id="menu" aria-label="Toggle Navigation"></button>
+      <nav>
+        <ul class="navigation">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Chamber Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Business Directory</h1>
+
+      <div class="filter-controls">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search businesses..."
+          aria-label="Search"
+        />
+        <select id="membership-filter">
+          <option value="all">All Membership Levels</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </div>
+
+      <div id="directory-grid" class="directory-grid">
+        <!-- Populated by JavaScript -->
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="currentyear"></span> Wanyama Edgar | Kampala, Uganda
+      </p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>
