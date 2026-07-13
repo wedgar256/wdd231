@@ -1,72 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="Wanyama Edgar" />
-    <meta
-      name="description"
-      content="Directory of businesses in the Chamber of Commerce"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Wanyama Edgar">
+    <meta name="description" content="Explore businesses that are members of the Kampala Chamber of Commerce directory.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Business Directory | WDD 231 Chamber</title>
+    <title>Business Directory | Kampala Chamber of Commerce</title>
+
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../styles/base.css" />
-    <link rel="stylesheet" href="../styles/larger.css" />
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="../styles/chamber.css">
 
-    <!-- JS -->
+    <!-- JavaScript -->
     <script src="../scripts/navigation.js" defer></script>
     <script src="directory.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <div class="logo-name">
-        <img src="../images/profile.webp" alt="Wanyama Edgar" class="logo" />
+    <script src="../scripts/date.js" defer></script>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo-name">
+
+        <img src="../images/profile.webp" alt="Kampala Chamber Logo" class="logo">
+
         <div>
-          <span class="site-name">Kampala Chamber</span>
-          <p>of Commerce</p>
+            <span class="site-name">Kampala Chamber</span>
+            <p>of Commerce</p>
         </div>
-      </div>
-      <button id="menu" aria-label="Toggle Navigation"></button>
-      <nav>
+
+    </div>
+
+    <button id="menu" aria-label="Open Navigation"></button>
+
+    <nav>
+
         <ul class="navigation">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Chamber Home</a></li>
-          <li><a href="directory.html" class="active">Directory</a></li>
-          <li><a href="discover.html">Discover</a></li>
+
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="directory.html" class="active">Directory</a></li>
+
+            <li><a href="#">Discover</a></li>
+
+            <li><a href="#">Join</a></li>
+
         </ul>
-      </nav>
-    </header>
 
-    <main>
-      <h1>Business Directory</h1>
+    </nav>
 
-      <div class="filter-controls">
-        <input
-          type="text"
-          id="search"
-          placeholder="Search businesses..."
-          aria-label="Search"
-        />
-        <select id="membership-filter">
-          <option value="all">All Membership Levels</option>
-          <option value="gold">Gold</option>
-          <option value="silver">Silver</option>
-          <option value="bronze">Bronze</option>
-        </select>
-      </div>
+</header>
 
-      <div id="directory-grid" class="directory-grid">
-        <!-- Populated by JavaScript -->
-      </div>
-    </main>
+<main>
 
-    <footer>
-      <p>
-        &copy; <span id="currentyear"></span> Wanyama Edgar | Kampala, Uganda
-      </p>
-      <p>Last Modified: <span id="lastModified"></span></p>
-    </footer>
-  </body>
+    <h1>Business Directory</h1>
+
+    <div class="view-buttons">
+
+        <button id="grid">Grid View</button>
+
+        <button id="list">List View</button>
+
+    </div>
+
+    <div id="members" class="grid">
+
+    </div>
+
+</main>
+
+<footer>
+
+    <div class="socials">
+
+        <a href="https://github.com/wedgar256" target="_blank" aria-label="GitHub">
+            <img src="../images/github-logo.svg" alt="GitHub">
+        </a>
+
+        <a href="https://www.linkedin.com/in/edgar-wans-aa0b4a3b6" target="_blank" aria-label="LinkedIn">
+            <img src="../images/linkedin-logo.svg" alt="LinkedIn">
+        </a>
+
+        <a href="https://x.com/WanyamaEdgar_" target="_blank" aria-label="X">
+            <img src="../images/x-logo.svg" alt="X">
+        </a>
+
+    </div>
+
+    <p>
+        &copy; <span id="currentyear"></span>
+        Wanyama Edgar | Kampala, Uganda
+    </p>
+
+    <p>
+        Last Modified:
+        <span id="lastModified"></span>
+    </p>
+
+</footer>
+
+</body>
 </html>

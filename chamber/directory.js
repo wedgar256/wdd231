@@ -1,7 +1,7 @@
 // chamber/directory.js
 const url = "members.json";
 
-const membersContainer = document.querySelector("#directory-grid");
+const membersContainer = document.querySelector("#members");
 const gridButton = document.querySelector("#grid");
 const listButton = document.querySelector("#list");
 
