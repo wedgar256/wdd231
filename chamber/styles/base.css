@@ -181,21 +181,21 @@ h1 {
 
 .card {
     background: var(--white);
-    border-radius: 10px;
+    padding: 1.5rem;
+    border-radius: 12px;
     overflow: hidden;
-
-    box-shadow: 0 3px 10px rgba(0,0,0,.12);
+    box-shadow: var(--shadow);
 }
 
 .card h2 {
-    background: var(--primary-color);
-    color: white;
+    color: var(--primary-color);
     text-align: center;
-    padding: .8rem;
+    margin-bottom: 1rem;
+    padding: .8rem 0;
 }
 
 .card p {
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .photo-card {

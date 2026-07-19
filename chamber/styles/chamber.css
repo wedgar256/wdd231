@@ -240,7 +240,7 @@ main h1 {
     height: clamp(280px, 45vw, 450px);
     object-fit: cover;
     object-position: center;
-    display: blur;
+    display: block;
     border-radius: 8px;
 }
 
@@ -310,26 +310,6 @@ main h1 {
     gap: 1.5rem;
 
     margin: 2rem 0;
-
-}
-
-.card {
-
-    background: white;
-
-    padding: 1.5rem;
-
-    border-radius: 12px;
-
-    box-shadow: var(--shadow);
-
-}
-
-.card h2 {
-
-    color: var(--primary-color);
-
-    margin-bottom: 1rem;
 
 }
 
