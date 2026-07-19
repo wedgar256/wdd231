@@ -76,6 +76,13 @@ main h1 {
 
 /* Member Cards */
 
+#spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    padding: 1rem 0;
+}
+
 .member-card {
     background: var(--card-background);
     border-radius: var(--border-radius);
@@ -102,7 +109,8 @@ main h1 {
     padding: .5rem;
 }
 
-.member-card h2 {
+.member-card h2,
+.member-card h3 {
     color: var(--primary-color);
     margin: 1rem 0 .5rem;
 }
@@ -207,6 +215,10 @@ main h1 {
         text-align: center;
     }
 
+    #spotlight-container {
+        grid-template-columns: 1fr;
+    }
+
     .member-card {
         padding: 1rem;
     }
@@ -228,7 +240,7 @@ main h1 {
     height: clamp(280px, 45vw, 450px);
     object-fit: cover;
     object-position: center;
-    display: block;
+    display: blur;
     border-radius: 8px;
 }
 
