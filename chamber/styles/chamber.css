@@ -14,12 +14,18 @@ body.chamber {
     --max-width: 1200px;
 
     background: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
-/* Main */
+/* Main Content Structure */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 
 /* Hero */
-
 .hero {
     text-align: center;
     padding: 2rem 1rem;
@@ -39,7 +45,6 @@ main h1 {
 }
 
 /* View Buttons */
-
 .view-buttons {
     display: flex;
     justify-content: center;
@@ -49,7 +54,6 @@ main h1 {
 
 .view-buttons button {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 50px;
@@ -57,7 +61,7 @@ main h1 {
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
-    transition: .35s;
+    transition: .35s ease;
 }
 
 .view-buttons button:hover {
@@ -66,16 +70,14 @@ main h1 {
 }
 
 /* Grid Layout */
-
 #members.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
-/* Member Cards */
-
+/* Spotlight Home Container */
 #spotlight-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -83,6 +85,7 @@ main h1 {
     padding: 1rem 0;
 }
 
+/* Member Cards */
 .member-card {
     background: var(--card-background);
     border-radius: var(--border-radius);
@@ -90,10 +93,22 @@ main h1 {
     box-shadow: var(--shadow);
     padding: 1.5rem;
     text-align: center;
-    transition: .35s;
+    transition: .35s ease;
     animation: fade .5s ease;
 }
+/* Keeps the link and badge grouped together nicely on cards, but spans cleanly across list columns */
+.card-meta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
 
+#members.list .member-card .card-meta-actions {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
 .member-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0,0,0,.18);
@@ -132,7 +147,6 @@ main h1 {
 }
 
 /* Membership Badges */
-
 .badge {
     display: inline-block;
     padding: .45rem .9rem;
@@ -143,33 +157,26 @@ main h1 {
     margin-top: .5rem;
 }
 
-.gold {
-    background: #d4af37;
-}
+.gold { background: #b59410; } /* Slight darkening for AA contrast score requirements */
+.silver { background: #767676; }
+.bronze { background: #a97142; }
 
-.silver {
-    background: #9a9a9a;
-}
-
-.bronze {
-    background: #a97142;
-}
-
-/* List View */
-
+/* List View Layout Fixes */
 #members.list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 #members.list .member-card {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4, 1fr); /* Changed from 5 to 4 columns to perfectly balance out your text tags */
     align-items: center;
     text-align: left;
     padding: 1rem 2rem;
+    border-top: none;
+    border-left: 6px solid var(--primary-color);
 }
 
 #members.list .member-card img {
@@ -180,26 +187,105 @@ main h1 {
     margin: 0;
 }
 
-/* Animation */
-
+/* Animations */
 @keyframes fade {
-
     from {
         opacity: 0;
         transform: translateY(15px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
-/* Responsive */
+/* ==========================
+   HERO / BANNER STYLES
+========================== */
+.home-hero {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 8px;
+    margin: 0 0 2rem 0; 
+    width: 100%;
+    display: grid;
+    grid-template-areas: "hero-stack";
+    border-radius: 8px;
+}
 
-@media (max-width:768px) {
+/* Force the image to match the container dimensions flawlessly */
+.home-hero img {
+    width: 100%;
+    height: clamp(300px, 45vw, 450px);
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    grid-area: hero-stack;
+    border-radius: 8px;
+}
 
+.hero-content {
+    grid-area: hero-stack;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.55); 
+    color: white;
+    padding: 1rem;
+}
+
+.hero-content h1 {
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    margin-bottom: 1rem;
+    color: #ffffff !important; 
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.15rem;
+    color: #ffffff;
+}
+
+.cta-button {
+    background: var(--accent-color);
+    color: #111;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: .3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background: #f2cb05;
+    transform: scale(1.05);
+}
+
+/* ==========================
+   HOME PAGE RESPONSIVE ARCHITECTURE
+========================== */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
     .view-buttons {
         flex-direction: column;
         align-items: center;
@@ -213,6 +299,8 @@ main h1 {
         grid-template-columns: 1fr;
         gap: .75rem;
         text-align: center;
+        border-left: none;
+        border-top: 6px solid var(--primary-color);
     }
 
     #spotlight-container {
@@ -222,103 +310,4 @@ main h1 {
     .member-card {
         padding: 1rem;
     }
-
-}
-
-/* ==========================
-   HERO
-========================== */
-
-.home-hero {
-    position: relative;
-    overflow: hidden;
-    background-color: white;
-}
-
-.home-hero img {
-    width: 100%;
-    height: clamp(280px, 45vw, 450px);
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    border-radius: 8px;
-}
-
-.hero-content {
-    position: absolute;
-    inset: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    background: rgba(0,0,0,.45);
-
-    color: white;
-
-    padding: 1rem;
-}
-
-.hero-content h1 {
-    font-size: clamp(2rem,4vw,3.5rem);
-    margin-bottom: 1rem;
-}
-
-.hero-content p {
-    max-width: 700px;
-    margin-bottom: 2rem;
-    font-size: 1.15rem;
-}
-
-.cta-button {
-    background: var(--accent-color);
-
-    color: black;
-
-    text-decoration: none;
-
-    padding: 1rem 2rem;
-
-    border-radius: 50px;
-
-    font-weight: bold;
-
-    transition: .3s;
-}
-
-.cta-button:hover {
-
-    background: #f2cb05;
-
-    transform: scale(1.05);
-
-}
-
-/* ==========================
-   HOME GRID
-========================== */
-
-.home-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 1.5rem;
-
-    margin: 2rem 0;
-
-}
-
-@media (min-width:768px) {
-
-    .home-grid {
-
-        grid-template-columns: 2fr 1fr;
-
-    }
-
 }

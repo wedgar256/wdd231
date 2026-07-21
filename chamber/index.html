@@ -8,7 +8,7 @@
       content="Explore the Kampala Chamber of Commerce business directory featuring local businesses and organizations."
     />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
     <title>Kampala Chamber of Commerce</title>
     <meta property="og:title" content="Kampala Chamber of Commerce">
@@ -19,21 +19,17 @@
 
     <link rel="icon" href="images/favicon.ico" />
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/larger.css" />
     <link rel="stylesheet" href="styles/chamber.css" />
 
-    <!-- JavaScript -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/home.js" defer></script>
     <script src="scripts/date.js" defer></script>
@@ -49,9 +45,8 @@
         />
 
         <div>
-          <span class="site-name"> Kampala Chamber </span>
-
-          <p>Directory</p>
+          <span class="site-name">Kampala Chamber</span>
+          <p>Home</p> 
         </div>
       </div>
 
@@ -59,12 +54,9 @@
 
       <nav>
         <ul class="navigation">
-          <li><a href="../index.html">Home</a></li>
-
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="directory.html">Directory</a></li>
-
           <li><a href="thankyou.html">Join</a></li>
-
           <li><a href="discover.html">Discover</a></li>
         </ul>
       </nav>
@@ -73,49 +65,46 @@
     <main>
       <section class="hero home-hero">
         <img
-          src="https://media.istockphoto.com/id/2275614120/photo/kampala-city-skyline-blue-sky-rainbow-over-trees-bright.jpg?s=612x612&w=0&k=20&c=sFrECz7wyaLtwjSukpU7WWUbowJpoi_STF9NMKMsAFk="
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsKWTgTyd4wuOW_i6UGj46ksfoLVX9MObDW5kqHncn6Q&s=10"
           alt="Kampala skyline and city landmarks"
           loading="lazy"
         />
 
         <div class="hero-content">
           <h1>Welcome to Kampala Chamber of Commerce</h1>
-
           <p>
-            Empowering businesses, fostering partnerships, and growing Uganda's
-            economy.
+            Empowering businesses, fostering partnerships, and growing Uganda's economy.
           </p>
-
           <a href="directory.html" class="cta-button">Explore the Directory</a>
         </div>
       </section>
 
-      <section class="events">
-        <h2>Current Events</h2>
+      <div class="home-grid">
+        <div class="left-column">
+          <section class="events">
+            <h2>Current Events</h2>
+            <article>
+              <h3>Business Networking Breakfast</h3>
+              <p>
+                Meet local entrepreneurs and business leaders this Friday at the Serena Hotel.
+              </p>
+            </article>
+          </section>
 
-        <article>
-          <h3>Business Networking Breakfast</h3>
+          <section class="weather">
+            <h2>Current Weather</h2>
+            <div id="current-weather"></div>
+            <div id="forecast"></div>
+          </section>
+        </div>
 
-          <p>
-            Meet local entrepreneurs and business leaders this Friday at the
-            Serena Hotel.
-          </p>
-        </article>
-      </section>
-
-      <section class="weather">
-        <h2>Current Weather</h2>
-
-        <div id="current-weather"></div>
-
-        <div id="forecast"></div>
-      </section>
-
-      <section class="spotlights">
-        <h2>Member Spotlights</h2>
-
-        <div id="spotlight-container"></div>
-      </section>
+        <div class="right-column">
+          <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container"></div>
+          </section>
+        </div>
+      </div>
     </main>
 
     <footer>
@@ -123,33 +112,16 @@
         <a href="https://github.com/wedgar256" target="_blank" rel="noopener">
           <img src="images/github-logo.svg" alt="GitHub Icon" />
         </a>
-
-        <a
-          href="https://www.linkedin.com/in/edgar-wans-aa0b4a3b6"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href="https://www.linkedin.com/in/edgar-wans-aa0b4a3b6" target="_blank" rel="noopener">
           <img src="images/linkedin-logo.svg" alt="LinkedIn Icon" />
         </a>
-
         <a href="https://x.com/WanyamaEdgar_" target="_blank" rel="noopener">
-          <img src="images/x-logo.svg" alt="X (formerly Twitter) logo" />
+          <img src="images/x-logo.svg" alt="X logo" />
         </a>
       </div>
 
-      <p>
-        &copy;
-
-        <span id="currentyear"></span>
-
-        Wanyama Edgar
-      </p>
-
-      <p>
-        Last Modified
-
-        <span id="lastModified"></span>
-      </p>
+      <p>&copy; <span id="currentyear"></span> Wanyama Edgar</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
   </body>
 </html>
