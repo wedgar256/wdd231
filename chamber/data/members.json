@@ -4,7 +4,7 @@
         "address": "MTN Towers, Kampala",
         "phone": "+256 772 123456",
         "website": "https://www.mtn.co.ug",
-        "image": "images/mtn.webp",
+            "image": "images/mtn.webp",
         "membership": "Gold"
     },
     {
@@ -12,7 +12,7 @@
         "address": "Airtel House, Kampala",
         "phone": "+256 752 987654",
         "website": "https://www.airtel.co.ug",
-        "image": "images/airtel.webp",
+            "image": "images/airtel.webp",
         "membership": "Gold"
     },
     {
@@ -20,7 +20,7 @@
         "address": "Mapeera House, Kampala",
         "phone": "+256 414 123456",
         "website": "https://www.centenarybank.co.ug",
-        "image": "images/centenary.webp",
+            "image": "images/centenary.webp",
         "membership": "Silver"
     },
     {
@@ -28,7 +28,7 @@
         "address": "Stanbic Business Centre, Kampala",
         "phone": "+256 312 224600",
         "website": "https://www.stanbicbank.co.ug",
-        "image": "images/stanbic.webp",
+            "image": "images/stanbic.webp",
         "membership": "Gold"
     },
     {
@@ -36,7 +36,7 @@
         "address": "Naalya, Kampala",
         "phone": "+256 414 666888",
         "website": "https://qualitysupermarket.co.ug",
-        "image": "images/quality.webp",
+            "image": "images/quality.webp",
         "membership": "Bronze"
     },
     {
@@ -44,7 +44,7 @@
         "address": "Ternan Avenue, Kampala",
         "phone": "+256 414 420000",
         "website": "https://www.marriott.com",
-        "image": "images/sheraton.webp",
+            "image": "images/sheraton.webp",
         "membership": "Gold"
     },
     {
@@ -52,7 +52,7 @@
         "address": "Port Bell Road, Kampala",
         "phone": "+256 312 226000",
         "website": "https://www.ugandabreweries.com",
-        "image": "images/breweries.webp",
+            "image": "images/breweries.webp",
         "membership": "Silver"
     },
     {
@@ -60,7 +60,7 @@
         "address": "Namanve Industrial Park",
         "phone": "+256 312 213100",
         "website": "https://roofingsgroup.com",
-        "image": "images/roofings.webp",
+            "image": "images/roofings.webp",
         "membership": "Gold"
     },
     {
@@ -68,7 +68,7 @@
         "address": "Kampala Road",
         "phone": "+256 312 531400",
         "website": "https://cafejavas.co.ug",
-        "image": "images/cafejavas.webp",
+            "image": "images/cafejavas.webp",
         "membership": "Silver"
     },
     {
@@ -76,7 +76,7 @@
         "address": "Industrial Area, Kampala",
         "phone": "+256 312 307200",
         "website": "https://movitproducts.com",
-        "image": "images/movit.webp",
+            "image": "images/movit.webp",
         "membership": "Bronze"
     }
 ]
