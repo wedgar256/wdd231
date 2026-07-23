@@ -19,7 +19,7 @@ body.chamber {
 }
 
 /* Main Content Structure */
-main {
+.chamber main {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 1rem;
@@ -236,7 +236,6 @@ dialog::backdrop {
     width: 100%;
     display: grid;
     grid-template-areas: "hero-stack";
-    border-radius: 8px;
 }
 
 /* Force the image to match the container dimensions flawlessly */
