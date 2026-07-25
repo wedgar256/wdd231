@@ -33,6 +33,7 @@ body {
     background: var(--light-color);
     color: var(--dark);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 img {
