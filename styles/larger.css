@@ -1,0 +1,50 @@
+/* ==========================================
+   WDD 231 Portal: Larger Screen Styles
+========================================== */
+
+@media screen and (min-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+        padding: 1rem 2rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        width: auto;
+        margin-top: 0;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        background: transparent;
+    }
+
+    .navigation a {
+        padding: 0.75rem 1rem;
+        border: 0;
+        border-radius: 5px;
+    }
+
+    .top-section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: stretch;
+    }
+
+    .photo-card img {
+        width: 260px;
+    }
+
+    .course-container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    footer {
+        padding: 2rem;
+    }
+}

@@ -2,24 +2,30 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Wanyama Edgar" />
     <meta
       name="description"
-      content="Discover Kampala's business community, landmarks, and local opportunities."
+      content="Discover Kampala's landmarks, local events, and business districts through the Kampala Chamber of Commerce."
     />
-    <title>Discover Kampala | Kampala Chamber of Commerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Kampala - Chamber of Commerce</title>
+
+    <meta property="og:title" content="Discover Kampala with the Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Discover Kampala's landmarks, local events, and business districts through the Kampala Chamber of Commerce."
+    />
+    <meta property="og:image" content="https://wedgar256.github.io/wdd231/chamber/images/kampala-city.webp" />
+    <meta property="og:url" content="https://wedgar256.github.io/wdd231/discover.html" />
+    <meta property="og:type" content="website" />
 
     <link rel="icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/larger.css" />
-    <link rel="stylesheet" href="styles/chamber.css" />
+    <link rel="stylesheet" href="styles/discover.css" />
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/discover.js" defer></script>
@@ -28,26 +34,14 @@
 
   <body class="chamber">
     <header>
-      <div class="logo-name">
-        <img
-          src="images/profile.webp"
-          alt="Kampala Chamber of Commerce logo"
-          class="logo"
-        />
-        <div>
-          <span class="site-name">Kampala Chamber</span>
-          <p>Discover</p>
-        </div>
-      </div>
-
-      <button id="menu" aria-label="Open Navigation"></button>
-
-      <nav>
+      <button id="menu" aria-label="Open navigation"></button>
+      <nav aria-label="Primary navigation">
         <ul class="navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="directory.html">Directory</a></li>
           <li><a href="join.html">Join</a></li>
           <li><a href="discover.html" class="active">Discover</a></li>
+          <li><a href="../project/index.html">Final</a></li>
         </ul>
       </nav>
     </header>
@@ -59,11 +53,18 @@
         <h2>Kampala Demographics</h2>
         <div class="info-card">
           <h3>Population</h3>
-          <p>Over 1.68 million residents live in the metropolitan area.</p>
+          <p>
+            Over 1.68 million residents in the metropolitan area, making it the
+            largest city in Uganda.
+          </p>
         </div>
+
         <div class="info-card">
           <h3>Economy</h3>
-          <p>Kampala is Uganda's commercial center and a hub for growing businesses.</p>
+          <p>
+            Kampala is the commercial heartbeat of Uganda, accounting for over
+            50% of the country's GDP.
+          </p>
         </div>
 
         <h2>Upcoming Local Events</h2>
@@ -74,33 +75,89 @@
       </aside>
 
       <section class="gallery">
-        <h1>Discover the City</h1>
-        <p>Explore Kampala's business community, landmarks, and local opportunities.</p>
+        <h1>Discover Kampala - Chamber of Commerce</h1>
+        <h2>Discover the City</h2>
+        <p>
+          Explore the vibrant life, landscapes, and business districts of our
+          beautiful city.
+        </p>
+
+        <div class="discover-showcase">
+          <h2>Featured Local Businesses</h2>
+          <div id="discover-members" class="discover-cards-grid" aria-live="polite"></div>
+        </div>
 
         <div class="image-grid">
           <figure>
-            <img src="images/kampala-city.webp" alt="Kampala city skyline" width="400" height="250" loading="lazy" />
-            <figcaption>Kampala's active commercial center.</figcaption>
+            <img
+              src="images/kampala-1.webp"
+              alt="Downtown Kampala Skyline"
+              width="400"
+              height="250"
+              loading="lazy"
+            />
+            <figcaption>The bustling downtown business district.</figcaption>
           </figure>
+
           <figure>
-            <img src="images/sheraton.webp" alt="Sheraton Kampala business venue" width="400" height="250" loading="lazy" />
-            <figcaption>Hospitality venues for meetings and events.</figcaption>
+            <img
+              src="images/kampala-2.webp"
+              alt="Local Market Vendors"
+              width="400"
+              height="250"
+              loading="lazy"
+            />
+            <figcaption>
+              Vibrant local markets supporting independent merchants.
+            </figcaption>
           </figure>
+
           <figure>
-            <img src="images/cafejavas.webp" alt="Cafe Javas local business" width="400" height="250" loading="lazy" />
-            <figcaption>Local businesses serving Kampala communities.</figcaption>
+            <img
+              src="images/kampala-3.webp"
+              alt="Serena Hotel Conference Center"
+              width="400"
+              height="250"
+              loading="lazy"
+            />
+            <figcaption>World-class conference and event centers.</figcaption>
           </figure>
+
           <figure>
-            <img src="images/roofings.webp" alt="Roofings Group business" width="400" height="250" loading="lazy" />
-            <figcaption>Industry and construction supporting growth.</figcaption>
+            <img
+              src="images/kampala-4.webp"
+              alt="Lake Victoria Shores"
+              width="400"
+              height="250"
+              loading="lazy"
+            />
+            <figcaption>Beautiful shores of Lake Victoria nearby.</figcaption>
           </figure>
+
           <figure>
-            <img src="images/breweries.webp" alt="Uganda Breweries business" width="400" height="250" loading="lazy" />
-            <figcaption>Established enterprises in the local economy.</figcaption>
+            <img
+              src="images/kampala-5.webp"
+              alt="Uganda National Mosque"
+              width="400"
+              height="250"
+              loading="lazy"
+            />
+            <figcaption>
+              Historic landmarks and cultural architecture.
+            </figcaption>
           </figure>
+
           <figure>
-            <img src="images/mtn.webp" alt="MTN Uganda business" width="400" height="250" loading="lazy" />
-            <figcaption>Technology and connectivity across the city.</figcaption>
+            <img
+              src="images/kampala-6.webp"
+              alt="Modern Highway Infrastructure"
+              width="400"
+              height="250"
+              loading="lazy"
+            />
+            <figcaption>
+              Expanding modern infrastructure and transit.
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -108,18 +165,36 @@
 
     <footer>
       <div class="socials">
-        <a href="https://github.com/wedgar256" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <img src="images/github-logo.svg" alt="GitHub" />
+        <a
+          href="https://github.com/wedgar256"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub">
+          <img src="images/github-logo.svg" alt="GitHub Icon" />
         </a>
-        <a href="https://www.linkedin.com/in/edgar-wans-aa0b4a3b6" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <img src="images/linkedin-logo.svg" alt="LinkedIn" />
+        <a
+          href="https://www.linkedin.com/in/edgar-wans-aa0b4a3b6"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <img src="images/linkedin-logo.svg" alt="LinkedIn Icon" />
         </a>
-        <a href="https://x.com/WanyamaEdgar_" target="_blank" rel="noopener noreferrer" aria-label="X">
-          <img src="images/x-logo.svg" alt="X" />
+        <a
+          href="https://x.com/WanyamaEdgar_"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X">
+          <img src="images/x-logo.svg" alt="X social media logo" />
         </a>
       </div>
-      <p>&copy; <span id="currentyear"></span> Wanyama Edgar</p>
-      <p>Last Modified: <span id="lastModified"></span></p>
+        <p>
+        &copy; <span id="currentyear"></span>
+        Wanyama Edgar | Kampala, Uganda
+      </p>
+      <p>
+        Last Modified:
+        <span id="lastModified"></span>
+      </p>
     </footer>
   </body>
 </html>

@@ -1,0 +1,238 @@
+/* ==========================================
+   WDD 231: Discover Page Stylesheet (discover.css)
+   Kampala Chamber of Commerce
+========================================== */
+
+/* ------------------------------------------
+   CORE VARIABLES & BASE STYLES
+------------------------------------------ */
+:root {
+    --primary-color: #0b3c5d;
+    --secondary-color: #328cc1;
+    --accent-color: #d9b310;
+    --background-color: #f7f7f7;
+    --card-background: #ffffff;
+    --text-color: #222222;
+    --border-radius: 12px;
+    --shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    --max-width: 1200px;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------------
+   DISCOVER MAIN GRID LAYOUT (Mobile-First)
+------------------------------------------ */
+.discover-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    align-items: start; /* Keeps top baseline aligned across both columns */
+}
+
+/* ------------------------------------------
+   SIDEBAR COMPONENTS
+------------------------------------------ */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.sidebar h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.info-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    border: 1px solid #e0e0e0;
+    border-left: 6px solid var(--primary-color);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.info-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* ------------------------------------------
+   VISIT TRACKER MESSAGE BOX (LocalStorage)
+------------------------------------------ */
+.visit-message {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: static; /* Removes any accidental header overlaps */
+}
+
+/* ------------------------------------------
+   GALLERY SECTION & CARDS
+------------------------------------------ */
+.gallery {
+    width: 100%;
+}
+
+.gallery h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.gallery > p {
+    margin: 0 0 1.5rem 0;
+    color: #555555;
+    font-size: 1.05rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.image-grid figure {
+    margin: 0;
+    background: var(--card-background);
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* WDD 231 Hover Effect Requirement */
+.image-grid figure:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.image-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.image-grid figcaption {
+    text-align: center;
+    padding: 0.85rem 0.5rem 0.25rem 0.5rem;
+    font-style: italic;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+/* ------------------------------------------
+   RESPONSIVE DESKTOP OVERRIDES
+------------------------------------------ */
+@media (min-width: 768px) {
+    .discover-layout {
+        grid-template-columns: 320px 1fr; /* Fixed sidebar, fluid gallery grid */
+        gap: 2.5rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .gallery h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Featured businesses rendered by discover.js */
+.discover-showcase {
+    margin: 2rem 0 1.5rem;
+}
+
+.discover-showcase h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.discover-cards-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.discover-card {
+    background: var(--card-background);
+    border: 1px solid #767676;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.discover-card img {
+    display: block;
+    height: 140px;
+    object-fit: contain;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.discover-card-content {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.discover-card-content h3,
+.discover-card-content p {
+    margin: 0;
+}
+
+.badge {
+    border-radius: 999px;
+    color: #ffffff;
+    font-weight: 700;
+    justify-self: start;
+    padding: 0.3rem 0.7rem;
+}
+
+.gold { background: #b59410; }
+.silver { background: #767676; }
+.bronze { background: #a97142; }
+
+.learn-more {
+    background: var(--secondary-color);
+    border-radius: 999px;
+    color: #ffffff;
+    font-weight: 700;
+    justify-self: start;
+    padding: 0.55rem 0.9rem;
+}
+
+.learn-more:hover {
+    background: var(--primary-color);
+}
+}
