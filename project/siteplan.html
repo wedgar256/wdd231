@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 Project Site Plan for East Africa Trail Seekers hiking community portal.">
+    <meta name="author" content="Wanyama Edgar">
+    <title>East Africa Trail Seekers - Site Plan</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/siteplan.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>East Africa Trail Seekers</h1>
+        <p>Project Site Plan & Design Architecture</p>
+    </header>
+
+    <main>
+
+        <!-- SECTION 1: SITE OVERVIEW -->
+<section class="card">
+    <h2>1. Site Overview</h2>
+    
+    <h3>Site Name</h3>
+    <p><strong>East Africa Trail Seekers</strong> (Domain Concept: <code>eatrailseekers.org</code>)</p>
+    
+    <h3>Reason for Site Name</h3>
+    <p>
+        This name was selected because it immediately communicates the regional focus (East Africa) 
+        and speaks directly to our target audience—adventurers and outdoor enthusiasts looking for 
+        reliable hiking trails, community expeditions, and local guide resources.
+    </p>
+
+    <h3>Site Purpose</h3>
+    <p>
+        The primary purpose of East Africa Trail Seekers is to empower outdoor enthusiasts by providing 
+        accurate trail data, live weather alerts, guided expedition schedules, and a community membership 
+        network for local and international hikers exploring Uganda and East Africa.
+    </p>
+</section>
+
+        <!-- SECTION 2: TARGET AUDIENCE & SCENARIOS -->
+        <section class="card">
+            <h2>2. Target Audience & Scenarios</h2>
+            <h3>Target Audience</h3>
+            <p>
+                Hikers, eco-tourists, weekend adventurers, and professional trek guides aged 18–55. 
+                They predominantly access the internet via mobile devices while traveling or planning weekend trips.
+            </p>
+
+            <h3>User Scenarios / Questions</h3>
+            <ul>
+                <li><strong>Scenario 1:</strong> "What are the difficulty ratings and elevation gains for trails near Mount Elgon?"</li>
+                <li><strong>Scenario 2:</strong> "How can I register for the upcoming group expedition to the Rwenzori Mountains?"</li>
+                <li><strong>Scenario 3:</strong> "What gear recommendations and weather forecasts should I prepare for before starting a hike?"</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 3: DESIGN SYSTEM (COLORS & TYPOGRAPHY) -->
+        <section class="card">
+            <h2>3. Design System</h2>
+            
+            <h3>Color Palette</h3>
+            <div class="color-palette">
+                <div class="color-swatch" style="background-color: #1b4332; color: #ffffff;">
+                    <strong>Primary</strong>
+                    <span>#1b4332</span>
+                    <small>Header, Footer, Main Accents</small>
+                </div>
+                <div class="color-swatch" style="background-color: #2d6a4f; color: #ffffff;">
+                    <strong>Secondary</strong>
+                    <span>#2d6a4f</span>
+                    <small>Buttons & Navigation Hover</small>
+                </div>
+                <div class="color-swatch" style="background-color: #e9c46a; color: #111111;">
+                    <strong>Accent</strong>
+                    <span>#e9c46a</span>
+                    <small>Call to Actions & Badges</small>
+                </div>
+                <div class="color-swatch" style="background-color: #f8f9fa; color: #212529; border: 1px solid #ccc;">
+                    <strong>Background</strong>
+                    <span>#f8f9fa</span>
+                    <small>Page Content Fill</small>
+                </div>
+            </div>
+
+            <h3>Typography</h3>
+            <div class="typography-demo">
+                <div class="font-heading">
+                    <h4>Heading Font: Oswald (Sans-Serif)</h4>
+                    <p class="sample-heading">Sample Heading Text — 1234567890</p>
+                </div>
+                <div class="font-body">
+                    <h4>Body Font: Open Sans (Sans-Serif)</h4>
+                    <p class="sample-body">
+                        Sample body text demonstrating high legibility across mobile screens and desktop viewports. 
+                        Calculated contrast scores pass WCAG AA standards.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: WIREFRAMES -->
+        <section class="card">
+            <h2>4. Wireframes</h2>
+            <p>Blueprints detailing the responsive visual layout for mobile and desktop screens.</p>
+            
+            <div class="wireframe-container">
+                <div class="wireframe-box">
+                    <h3>Mobile Layout View</h3>
+                    <div class="wireframe-mockup mobile-mockup">
+                        <div class="wf-header">Header / Logo / Hamburger</div>
+                        <div class="wf-hero">Hero Image & CTA</div>
+                        <div class="wf-content">Trail Cards Stack</div>
+                        <div class="wf-sidebar">Weather Widget</div>
+                        <div class="wf-footer">Footer Meta</div>
+                    </div>
+                </div>
+
+                <div class="wireframe-box">
+                    <h3>Desktop Layout View</h3>
+                    <div class="wireframe-mockup desktop-mockup">
+                        <div class="wf-header">Header & Horizontal Navigation Menu</div>
+                        <div class="wf-hero">Full Width Hero Carousel / Banner</div>
+                        <div class="wf-grid">
+                            <div class="wf-content">Main Trail Directory Grid (3 Columns)</div>
+                            <div class="wf-sidebar">Sidebar / Events</div>
+                        </div>
+                        <div class="wf-footer">Footer 3-Column Layout</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> East Africa Trail Seekers Site Plan | Wanyama Edgar</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
