@@ -2,9 +2,27 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Wanyama Edgar" />
+    <meta
+      name="description"
+      content="Discover Kampala's landmarks, local events, and business districts through the Kampala Chamber of Commerce."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discover Kampala - Chamber of Commerce</title>
 
+    <meta property="og:title" content="Discover Kampala with the Chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Discover Kampala's landmarks, local events, and business districts through the Kampala Chamber of Commerce."
+    />
+    <meta property="og:image" content="https://wedgar256.github.io/wdd231/chamber/images/kampala-city.webp" />
+    <meta property="og:url" content="https://wedgar256.github.io/wdd231/discover.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="chamber/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="chamber/styles/base.css" />
     <link rel="stylesheet" href="chamber/styles/larger.css" />
     <link rel="stylesheet" href="chamber/styles/chamber.css" />
@@ -15,7 +33,17 @@
   </head>
 
   <body class="chamber">
-    <header></header>
+    <header>
+      <button id="menu" aria-label="Open navigation"></button>
+      <nav aria-label="Primary navigation">
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chamber/index.html">Chamber Home</a></li>
+          <li><a href="chamber/directory.html">Directory</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main class="discover-layout">
       <aside class="sidebar">
@@ -46,6 +74,7 @@
       </aside>
 
       <section class="gallery">
+        <h1>Discover Kampala - Chamber of Commerce</h1>
         <h2>Discover the City</h2>
         <p>
           Explore the vibrant life, landscapes, and business districts of our

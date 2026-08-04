@@ -85,75 +85,6 @@ body.chamber {
     transform: scale(1.05);
 }
 
-/* ==========================
-   DIRECTORY & CARDS
-========================== */
-.view-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-#members.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-}
-
-#spotlight-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.25rem;
-    padding: 1rem 0;
-}
-
-.member-card {
-    background: var(--card-background);
-    border-radius: var(--border-radius);
-    border-top: 6px solid var(--primary-color);
-    box-shadow: var(--shadow);
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.member-card img {
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-    margin: auto;
-}
-
-.badge {
-    display: inline-block;
-    padding: .45rem .9rem;
-    border-radius: 30px;
-    color: white;
-    font-weight: bold;
-}
-.gold { background: #d4af37; }
-.silver { background: #9a9a9a; }
-.bronze { background: #a97142; }
-
-/* List View Fixes */
-#members.list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-#members.list .member-card {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    text-align: left;
-    padding: 1rem 2rem;
-}
-
-#members.list .member-card img {
-    display: none;
-}
 /* Main Content Structure */
 .chamber main {
     max-width: var(--max-width);
@@ -480,7 +411,7 @@ dialog::backdrop {
 
 .info-card {
     background: var(--card-background);
-    border: 1px solid #ddd;
+    border: 1px solid #767676;
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1.5rem;
